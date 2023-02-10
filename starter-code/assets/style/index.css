@@ -1,0 +1,21 @@
+/*Desktop Laptop*/
+@media (min-width: 1025px) {
+  body {
+    background-color: #000F;
+  }
+}
+
+/*Tablet*/
+@media (min-width: 481px) and (max-width: 1024px) {
+  body {
+    background-color: #0008;
+  }
+}
+
+/*Phone*/
+@media (max-width: 480px) {
+  body {
+    background-color: #0002;
+  }
+}
+/*# sourceMappingURL=index.css.map */
