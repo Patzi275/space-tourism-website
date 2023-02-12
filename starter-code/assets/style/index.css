@@ -1,21 +1,128 @@
+/* Style de base*/
+* {
+  margin: unset;
+  padding: unset;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  color: white;
+  font-family: lato;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px;
+}
+
+header .hamburger_container {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+header .hamburger_container input[type=checkbox] {
+  display: none;
+  position: relative;
+  left: 23px;
+}
+
+.explore {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 130px;
+  width: 130px;
+  margin: 70px auto 0 auto;
+  border-radius: 50%;
+}
+
+.explore a {
+  color: black;
+}
+
 /*Desktop Laptop*/
-@media (min-width: 1025px) {
-  body {
-    background-color: #000F;
-  }
-}
-
 /*Tablet*/
-@media (min-width: 481px) and (max-width: 1024px) {
-  body {
-    background-color: #0008;
-  }
-}
-
 /*Phone*/
 @media (max-width: 480px) {
   body {
-    background-color: #0002;
+    background-image: url("../image/home/background-home-mobile.jpg");
+  }
+  header {
+    padding-bottom: 05px;
+  }
+  header .hamburger_container {
+    z-index: 3;
+  }
+  header nav {
+    /*display: none;*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(20.6px);
+    -webkit-backdrop-filter: blur(10.6px);
+  }
+  header nav ul {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 20vh;
+  }
+  header nav ul li {
+    margin-left: 40px;
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+  header nav ul li .number {
+    margin-right: 15px;
+    font-weight: bold;
+  }
+  main {
+    text-align: center;
+  }
+  main h1 {
+    font-weight: normal;
+    font-size: 90px;
+    line-height: 80px;
+  }
+  main h1 span {
+    font-size: 20px;
+  }
+  main p {
+    font-size: 14px;
+    margin: 30px;
   }
 }
 /*# sourceMappingURL=index.css.map */

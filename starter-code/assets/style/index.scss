@@ -1,23 +1,134 @@
+/* Style de base*/
+* {
+    margin: unset;
+    padding: unset;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    color: white;
+    font-family: lato;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 30px;
+
+    .hamburger_container {
+        align-self: center;
+
+        input[type=checkbox] {
+            display: none;
+            position: relative;
+            left: 23px;
+        }
+    }
+}
+
+.explore {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    width: 130px;
+    margin: 70px auto 0 auto;
+    border-radius: 50%;
+    a {
+        color: black;
+
+    }
+}
+
+
 
 /*Desktop Laptop*/
-@media (min-width: 1025px){
-    body {
-        background-color: #000F;
-    }
+@media (min-width: 1025px) {
+    body {}
 }
 
 /*Tablet*/
 @media (min-width: 481px) and (max-width: 1024px) {
-    body {
-        background-color: #0008;
-    }    
+    body {}
 }
-
 
 /*Phone*/
 @media (max-width: 480px) {
     body {
-        background-color: #0002;
-    }    
-    
+        background-image: url('../image/home/background-home-mobile.jpg');
+
+    }
+
+    header {
+        padding-bottom: 05px;
+
+        .hamburger_container {
+            z-index: 3;
+        }
+
+        nav {
+            /*display: none;*/
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 70vw;
+            height: 100vh;
+            background: rgba($color: #fff, $alpha: .0);
+            backdrop-filter: blur(20.6px);
+            -webkit-backdrop-filter: blur(10.6px);
+
+            ul {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                margin-top: 20vh;
+
+                li {
+                    margin-left: 40px;
+                    margin-bottom: 30px;
+                    font-size: 18px;
+
+                    .number {
+                        margin-right: 15px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+    }
+
+    main {
+        text-align: center;
+
+        h1 {
+            font-weight: normal;
+            font-size: 90px;
+            line-height: 80px;
+
+            span {
+                font-size: 20px;
+            }
+        }
+
+        p {
+            font-size: 14px;
+            margin: 30px;
+        }
+        
+    }
+
 }
