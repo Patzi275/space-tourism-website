@@ -530,6 +530,10 @@ header .hamburger_container input[type=checkbox] {
   left: 23px;
 }
 
+header .nav_close {
+  display: none;
+}
+
 header nav {
   text-transform: uppercase;
   font-family: "Barlow Condensed", "Lato", "Arial";
@@ -546,12 +550,17 @@ header nav ul {
 
 @media (min-width: 320px) {
   header nav {
-    position: absolute;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
     top: 0;
     right: 0;
-    width: 70vw;
-    height: 100vh;
+    background-color: #111;
+    overflow: hidden;
     padding-top: 120px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
     background: rgba(255, 255, 255, 0);
     backdrop-filter: blur(40.6px);
     -webkit-backdrop-filter: blur(40.6px);

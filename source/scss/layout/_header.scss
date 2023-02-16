@@ -24,6 +24,10 @@ header {
         }
     }
 
+    .nav_close {
+        display: none;
+    }
+
     nav {
         @include nav-text;
 
@@ -33,12 +37,16 @@ header {
         }
 
         @include respond-to('small') {
-            position: absolute;
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
             top: 0;
             right: 0;
-            width: 70vw;
-            height: 100vh;
+            background-color: #111;
+            overflow: hidden;
             padding-top: 120px;
+            transition: 0.5s;
             @include glass-background;
 
             ul {
