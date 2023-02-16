@@ -2,3 +2,50 @@
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
 
+body {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
+    @include respond-to('small') {
+        background-image: image('home/background-home-mobile.jpg');
+    }
+
+    @include respond-to('medium') {
+        background-image: image('home/background-home-tablet.jpg');
+    }
+
+    @include respond-to('large') {
+        background-image: image('home/background-home-desktop.jpg');
+    }
+}
+
+main {
+    text-align: center;
+    padding: 20px;
+
+    h1 {
+        font-weight: normal;
+        @include heading(5);
+        
+        span {
+            @include heading(2);
+        }
+    }
+
+}
+
+.circular-btn-1 {
+    color: $brand-color;
+    background-color: white;
+    @include heading(4);
+    height: 50px;
+    width: 50px;    
+    border-radius: 50%;
+    padding: 100px;
+    margin: auto;
+    margin-top: 80px;
+    transition: 1s;
+    @include flex-center;
+}

@@ -8,8 +8,16 @@
 
 /// Regular font family
 /// @type List
-$text-font-stack: 'Barlow Condensed', 'Lato', 'Arial' !default;
-$heading-font-stack: 'Bellfair', 'Times New Roman' !default;
+$text-font-stack: (
+  'Barlow Condensed',
+  'Lato', 
+  'Arial'
+) !default;
+
+$heading-font-stack: (
+  'Bellfair', 
+  'Times New Roman'
+) !default;
 
 /// Code (monospace) font family
 /// @type List
@@ -62,9 +70,9 @@ $max-width: 1180px !default;
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
-  'small': 320px,
-  'medium': 768px,
-  'large': 1024px,
+  'small':(min-width: 320px),
+  'medium': (min-width: 768px),
+  'large': (min-width: 1024px),
 ) !default;
 
 
@@ -76,4 +84,4 @@ $breakpoints: (
 /// @type String
 /// @example scss - When using a CDN
 ///   $base-url: 'https://cdn.example.com/assets/';
-$base-url: '../assets/' !default;
+$base-url: '../' !default;

@@ -2,3 +2,59 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px;
+    padding-top: 30px;
+
+    .logo {
+        width: 42px;
+    }
+
+    .hamburger_container {
+        align-self: center;
+        z-index: 2;
+        
+        input[type=checkbox] {
+            display: none;
+            position: relative;
+            left: 23px;
+        }
+    }
+
+    nav {
+        @include nav-text;
+
+        ul {
+            display: flex;
+            list-style: none;
+        }
+
+        @include respond-to('small') {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 70vw;
+            height: 100vh;
+            padding-top: 120px;
+            @include glass-background;
+
+            ul {
+                display: block;
+                height: 100%;
+                margin-top: unset;
+
+                li {
+                    margin-bottom: 30px;
+
+                    .number {
+                        font-weight: 800;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -366,7 +366,7 @@ html {
  * Basic styles for links
  */
 a {
-  color: #0b0d17;
+  color: white;
   text-decoration: none;
 }
 
@@ -426,12 +426,12 @@ a:hover, a:active, a:focus, a:focus-within {
 
 @font-face {
   font-family: 'Barlow Condensed';
-  src: url("../assets/fonts/BarlowCondensed-Regular.ttf") format("ttf");
+  src: url("../fonts/BarlowCondensed-Regular.ttf");
 }
 
 @font-face {
   font-family: Bellefair;
-  src: url("../assets/fonts/Bellefair-Regular.ttf") format("ttf");
+  src: url("../fonts/Bellefair-Regular.ttf");
 }
 
 /**
@@ -499,5 +499,143 @@ body {
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 30px;
+  padding-top: 30px;
+}
+
+header .logo {
+  width: 42px;
+}
+
+header .hamburger_container {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  z-index: 2;
+}
+
+header .hamburger_container input[type=checkbox] {
+  display: none;
+  position: relative;
+  left: 23px;
+}
+
+header nav {
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", "Lato", "Arial";
+  font-size: 16px;
+  letter-spacing: 2.7px;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+@media (min-width: 320px) {
+  header nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70vw;
+    height: 100vh;
+    padding-top: 120px;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(40.6px);
+    -webkit-backdrop-filter: blur(40.6px);
+  }
+  header nav ul {
+    display: block;
+    height: 100%;
+    margin-top: unset;
+  }
+  header nav ul li {
+    margin-bottom: 30px;
+  }
+  header nav ul li .number {
+    font-weight: 800;
+    margin-right: 10px;
+  }
+}
+
+body {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+@media (min-width: 320px) {
+  body {
+    background-image: url("../images/home/background-home-mobile.jpg");
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url("../images/home/background-home-tablet.jpg");
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-image: url("../images/home/background-home-desktop.jpg");
+  }
+}
+
+main {
+  text-align: center;
+  padding: 20px;
+}
+
+main h1 {
+  font-weight: normal;
+  font-family: "Barlow Condensed", "Lato", "Arial";
+  font-size: 28px;
+  letter-spacing: 4.75px;
+  text-transform: uppercase;
+}
+
+main h1 span {
+  font-family: "Bellfair", "Times New Roman";
+  font-size: 100px;
+  text-transform: uppercase;
+}
+
+.circular-btn-1 {
+  color: #0b0d17;
+  background-color: white;
+  font-family: "Bellfair", "Times New Roman";
+  font-size: 32px;
+  text-transform: uppercase;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  padding: 100px;
+  margin: auto;
+  margin-top: 80px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=main.css.map */

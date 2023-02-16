@@ -79,12 +79,13 @@ header {
             z-index: 3;
         }
 
+    
         nav {
-            /*display: none;*/
+            display: none;
             position: absolute;
             top: 0;
             right: 0;
-            width: 70vw;
+            width: 0;
             height: 100vh;
             background: rgba($color: #fff, $alpha: .0);
             backdrop-filter: blur(20.6px);

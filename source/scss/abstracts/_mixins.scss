@@ -48,7 +48,7 @@
       inspect($raw-query)
     );
 
-    @media #{$query} {
+    @media #{$raw-query} {
       @content;
     }
   } @else {
@@ -57,8 +57,65 @@
   }
 }
 
-@mixin glass-background($blur: 20.6px) {
-  background: rgba($color: #fff, $alpha: .0);
+/// Heading style
+/// @access public
+/// @param {Number} $numero - Numero
+@mixin heading($numero) {
+  $heading-fs: (
+    1: 150px,
+    2: 100px,
+    3: 56px,
+    4: 32px
+  );
+
+  @if ($numero == 5) {
+    font-family: $text-font-stack;
+    font-size: 28px;
+    letter-spacing: 4.75px;
+  } @else {
+    font-family: $heading-font-stack;
+    font-size: map-get($heading-fs, $numero);
+  }
+
+  text-transform: uppercase;
+}
+
+
+/// Sub Heading style
+/// @access public
+/// @param {Number} $numero - Numero
+@mixin sub-heading($numero) {
+  @if ($numero == 1) {
+    font-family: $heading-font-stack;
+    font-size: 28px;
+  }
+  
+  @if ($numero == 2) {
+    font-family: $text-font-stack;
+    font-size: 14px;
+    letter-spacing: 2.35px;
+  }
+
+  text-transform: uppercase;
+}
+
+/// Nav Text style
+/// @access public
+@mixin nav-text {
+  text-transform: uppercase;
+  font-family: $text-font-stack;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+}
+
+@mixin glass-background($blur: 40.6px) {
+  background: rgba($color: #fff, $alpha: 0.0);
   backdrop-filter: blur($blur);
   -webkit-backdrop-filter: blur($blur);
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
