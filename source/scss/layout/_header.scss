@@ -6,15 +6,15 @@ header {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 30px;
-    padding-top: 30px;
-
+    
     .logo {
-        min-width: fit-content;
+        object-fit: none;
+        margin: 20px;
     }
-
+    
     .hamburger_container {
         display: none;
+        padding: 20px;
         align-self: center;
         z-index: 2;
         
@@ -31,59 +31,61 @@ header {
         @include respond-to('small') {
             display: block;
         }
-
-        @include respond-to('medium') {
-            display: none;
-        }
     }
-
 
     nav {
         @include nav-text;
-
-        ul {
-            display: flex;
-            list-style: none;
-        }
-
+        display: flex;
+        
         @include respond-to('small') {
+            @include glass-background;
             height: 100%;
             width: 0;
             position: fixed;
             z-index: 1;
             top: 0;
             right: 0;
-            background-color: #111;
             overflow: hidden;
             padding-top: 120px;
             transition: 0.5s;
-            @include glass-background;
+            
+            display: flex;
+            flex-direction: column;
+            
+            a {
+                padding-left: 40px;
+                margin-bottom: 30px;
 
-            ul {
-                display: block;
-                height: 100%;
-                margin-top: unset;
-
-                li {
-                    margin-bottom: 30px;
-
-                    .number {
-                        font-weight: 800;
-                        margin-right: 10px;
-                    }
+                .number {
+                    font-weight: 800;
+                    margin-right: 10px;
                 }
             }
         }
 
         @include respond-to('medium')  {
-            position: static;
-            width: min-content;
-            padding: 0;
-            ul {
-                display: flex;
-                flex-direction: row;
-                
+            @include flex-center;
+            background-color: #131722FF;
+            width: 55%;
+
+            .number {
+                display: none;
             }
+
+            a {
+                @include flex-center;
+                height: 100%;
+                margin: auto 20px;
+                transition: 1s;
+
+                &:hover {
+                    border-bottom: solid white;
+                }
+            }
+            
         }
+    }
+
+    @include respond-to('medium') {
     }
 }

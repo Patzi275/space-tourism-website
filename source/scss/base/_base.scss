@@ -30,6 +30,11 @@ a {
 
   @include on-event {
     color: $text-color;
-    text-decoration: underline;
+    text-decoration: none; // underlined
   }
+}
+
+ul {
+  margin: unset;
+  padding: unset;
 }
