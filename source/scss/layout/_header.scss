@@ -10,6 +10,11 @@ header {
     .logo {
         object-fit: none;
         margin: 20px;
+        margin-left: 40px;
+
+        @include respond-to('small') {
+            margin-left: 20px;
+        }
     }
     
     .hamburger_container {
@@ -36,6 +41,16 @@ header {
     nav {
         @include nav-text;
         display: flex;
+
+        a {
+            padding-left: 40px;
+            margin-bottom: 30px;
+
+            .number {
+                font-weight: 800;
+                margin-right: 10px;
+            }
+        }
         
         @include respond-to('small') {
             @include glass-background;
@@ -52,20 +67,11 @@ header {
             display: flex;
             flex-direction: column;
             
-            a {
-                padding-left: 40px;
-                margin-bottom: 30px;
-
-                .number {
-                    font-weight: 800;
-                    margin-right: 10px;
-                }
-            }
         }
 
         @include respond-to('medium')  {
             @include flex-center;
-            background-color: #131722FF;
+            @include glass-background(0.03);
             width: 55%;
 
             .number {
@@ -75,7 +81,9 @@ header {
             a {
                 @include flex-center;
                 height: 100%;
+                padding: unset;
                 margin: auto 20px;
+                color: white;
                 transition: 1s;
 
                 &:hover {
@@ -84,8 +92,5 @@ header {
             }
             
         }
-    }
-
-    @include respond-to('medium') {
     }
 }

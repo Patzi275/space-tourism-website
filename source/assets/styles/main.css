@@ -477,6 +477,13 @@ header .logo {
   -o-object-fit: none;
      object-fit: none;
   margin: 20px;
+  margin-left: 40px;
+}
+
+@media (max-width: 768px) {
+  header .logo {
+    margin-left: 20px;
+  }
 }
 
 header .hamburger_container {
@@ -514,6 +521,16 @@ header nav {
   display: flex;
 }
 
+header nav a {
+  padding-left: 40px;
+  margin-bottom: 30px;
+}
+
+header nav a .number {
+  font-weight: 800;
+  margin-right: 10px;
+}
+
 @media (max-width: 768px) {
   header nav {
     background: rgba(255, 255, 255, 0);
@@ -537,14 +554,6 @@ header nav {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  header nav a {
-    padding-left: 40px;
-    margin-bottom: 30px;
-  }
-  header nav a .number {
-    font-weight: 800;
-    margin-right: 10px;
-  }
 }
 
 @media (min-width: 769px) and (max-width: 1023px) {
@@ -558,7 +567,9 @@ header nav {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-color: #131722FF;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(40.6px);
+    -webkit-backdrop-filter: blur(40.6px);
     width: 55%;
   }
   header nav .number {
@@ -575,7 +586,9 @@ header nav {
         -ms-flex-align: center;
             align-items: center;
     height: 100%;
+    padding: unset;
     margin: auto 20px;
+    color: white;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -643,10 +656,42 @@ main h1 div:nth-child(2) {
   margin: 20px 0;
 }
 
+@media (min-width: 769px) and (max-width: 1023px) {
+  main h1 {
+    margin-top: 100px;
+  }
+  main h1 div:nth-child(1) {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  main h1 div:nth-child(2) {
+    /*
+  $heading-fs: (
+    1: 150px,
+    2: 100px,
+    3: 56px,
+    4: 32px
+  );
+  */
+    color: white;
+    font-family: "Bellefair", "Times New Roman";
+    font-size: 150px;
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
+}
+
 main p {
-  max-width: 400px;
+  max-width: 390px;
   padding: 0 20px;
   margin: auto;
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  main p {
+    line-height: 1.6;
+  }
 }
 
 .circular-btn-1 {
@@ -679,6 +724,23 @@ main p {
   padding: 100px;
   margin: auto;
   margin-top: 40px;
+  -webkit-transition: -webkit-box-shadow .6s ease-out;
+  transition: -webkit-box-shadow .6s ease-out;
+  transition: box-shadow .6s ease-out;
+  transition: box-shadow .6s ease-out, -webkit-box-shadow .6s ease-out;
   scale: .7;
+}
+
+.circular-btn-1:hover {
+  -webkit-box-shadow: 0 0 0 60px rgba(255, 255, 255, 0.2);
+          box-shadow: 0 0 0 60px rgba(255, 255, 255, 0.2);
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .circular-btn-1 {
+    margin-top: 140px;
+    margin-bottom: 120px;
+    scale: 1.2;
+  }
 }
 /*# sourceMappingURL=main.css.map */

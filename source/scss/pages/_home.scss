@@ -38,12 +38,34 @@ main {
             @include heading(2);
             margin: 20px 0;
         }
+
+        @include respond-to('medium') {
+            margin-top: 100px;
+            
+            div:nth-child(1) {
+                @include sub-heading(4);
+                font-size: 20px;
+                margin-top: 20px;
+            }
+            div:nth-child(2) {
+                @include heading(1);
+                margin: 20px 0;
+            }
+        }
     }
 
     p {
-        max-width: 400px;
+        max-width: 390px;
         padding: 0 20px;
         margin: auto;
+
+        @include respond-to('medium') {
+            line-height: 1.6;
+        }
+    }
+
+    @include respond-to('medium') {
+
     }
 
 }
@@ -59,5 +81,16 @@ main {
     padding: 100px;
     margin: auto;
     margin-top: 40px;
+    transition: box-shadow .6s ease-out;
     scale: .7;
+
+    &:hover {
+        box-shadow: 0 0 0 60px rgba(255, 255, 255, 0.2);
+    }
+
+    @include respond-to('medium') {
+        margin-top: 140px;
+        margin-bottom: 120px;
+        scale: 1.2;
+    }
 }

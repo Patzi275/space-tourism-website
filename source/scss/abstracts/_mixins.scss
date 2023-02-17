@@ -124,8 +124,8 @@
   font-size: 14px;
 }
 
-@mixin glass-background($blur: 40.6px) {
-  background: rgba($color: #fff, $alpha: 0.0);
+@mixin glass-background($opacity: 0.0, $blur: 40.6px) {
+  background: rgba($color: #fff, $alpha: $opacity);
   backdrop-filter: blur($blur);
   -webkit-backdrop-filter: blur($blur);
 }
