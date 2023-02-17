@@ -10,10 +10,11 @@ header {
     padding-top: 30px;
 
     .logo {
-        width: 42px;
+        min-width: fit-content;
     }
 
     .hamburger_container {
+        display: none;
         align-self: center;
         z-index: 2;
         
@@ -22,11 +23,20 @@ header {
             position: relative;
             left: 23px;
         }
+
+        .nav_close {
+            display: none;
+        }
+
+        @include respond-to('small') {
+            display: block;
+        }
+
+        @include respond-to('medium') {
+            display: none;
+        }
     }
 
-    .nav_close {
-        display: none;
-    }
 
     nav {
         @include nav-text;
@@ -62,6 +72,17 @@ header {
                         margin-right: 10px;
                     }
                 }
+            }
+        }
+
+        @include respond-to('medium')  {
+            position: static;
+            width: min-content;
+            padding: 0;
+            ul {
+                display: flex;
+                flex-direction: row;
+                
             }
         }
     }

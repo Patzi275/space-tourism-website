@@ -9,14 +9,18 @@
 /// Regular font family
 /// @type List
 $text-font-stack: (
-  'Barlow Condensed',
+  'Barlow',
   'Lato', 
   'Arial'
 ) !default;
 
-$heading-font-stack: (
-  'Bellfair', 
+$first-font-stack: (
+  'Bellefair', 
   'Times New Roman'
+) !default;
+
+$second-font-stack: (
+  'Barlow Condensed'
 ) !default;
 
 /// Code (monospace) font family
@@ -48,7 +52,7 @@ $light-sky-blue: rgb(208, 214, 249) !default;
 
 /// Copy text color
 /// @type Color
-$text-color: rgb(255, 255, 255) !default;
+$text-color: $light-sky-blue !default;
 
 /// Main brand color
 /// @type Color
@@ -70,9 +74,9 @@ $max-width: 1180px !default;
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
-  'small':(min-width: 320px),
-  'medium': (min-width: 768px),
-  'large': (min-width: 1024px),
+  'small':(max-width: 768px),
+  'medium': '(min-width: 769px) and (max-width: 1023px)',
+  'large': (min-width: 1023px),
 ) !default;
 
 

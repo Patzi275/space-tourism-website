@@ -366,62 +366,13 @@ html {
  * Basic styles for links
  */
 a {
-  color: white;
+  color: #d0d6f9;
   text-decoration: none;
 }
 
 a:hover, a:active, a:focus, a:focus-within {
-  color: white;
+  color: #d0d6f9;
   text-decoration: underline;
-}
-
-/**
- * Heading 
- */
-.heading {
-  font-family: "Bellfair", "Times New Roman";
-}
-
-.heading1 {
-  font-size: 150px;
-}
-
-.heading2 {
-  font-size: 100px;
-}
-
-.heading3 {
-  font-size: 56px;
-}
-
-.heading4 {
-  font-size: 32px;
-}
-
-.heading5 {
-  font-family: "Barlow Condensed", "Lato", "Arial";
-  font-size: 28px;
-  letter-spacing: 4.75;
-}
-
-.sub-heading {
-  font-family: "Barlow Condensed", "Lato", "Arial";
-}
-
-.sub-heading1 {
-  font-family: "Bellfair", "Times New Roman";
-  font-size: 28px;
-}
-
-.sub-heading2 {
-  font-size: 14px;
-  letter-spacing: 2.35;
-}
-
-.nav-text {
-  font-family: "Barlow Condensed", "Lato", "Arial";
-  font-size: 16px;
-  letter-spacing: 2.7;
 }
 
 @font-face {
@@ -430,7 +381,12 @@ a:hover, a:active, a:focus, a:focus-within {
 }
 
 @font-face {
-  font-family: Bellefair;
+  font-family: 'Barlow';
+  src: url("../fonts/Barlow-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Bellefair';
   src: url("../fonts/Bellefair-Regular.ttf");
 }
 
@@ -438,8 +394,9 @@ a:hover, a:active, a:focus, a:focus-within {
  * Basic typography style for copy text
  */
 body {
-  color: white;
-  font: normal 125%/1.4 "Barlow Condensed", "Lato", "Arial";
+  color: #d0d6f9;
+  font-style: normal;
+  font-family: "Barlow", "Lato", "Arial";
 }
 
 /**
@@ -514,10 +471,13 @@ header {
 }
 
 header .logo {
-  width: 42px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
 }
 
 header .hamburger_container {
+  display: none;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -530,13 +490,25 @@ header .hamburger_container input[type=checkbox] {
   left: 23px;
 }
 
-header .nav_close {
+header .hamburger_container .nav_close {
   display: none;
+}
+
+@media (max-width: 768px) {
+  header .hamburger_container {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  header .hamburger_container {
+    display: none;
+  }
 }
 
 header nav {
   text-transform: uppercase;
-  font-family: "Barlow Condensed", "Lato", "Arial";
+  font-family: "Barlow Condensed";
   font-size: 16px;
   letter-spacing: 2.7px;
 }
@@ -548,7 +520,7 @@ header nav ul {
   list-style: none;
 }
 
-@media (min-width: 320px) {
+@media (max-width: 768px) {
   header nav {
     height: 100%;
     width: 0;
@@ -579,6 +551,25 @@ header nav ul {
   }
 }
 
+@media (min-width: 769px) and (max-width: 1023px) {
+  header nav {
+    position: static;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    padding: 0;
+  }
+  header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 body {
   background-position: center;
   background-size: cover;
@@ -586,19 +577,19 @@ body {
   min-height: 100vh;
 }
 
-@media (min-width: 320px) {
+@media (max-width: 768px) {
   body {
     background-image: url("../images/home/background-home-mobile.jpg");
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) and (max-width: 1023px) {
   body {
     background-image: url("../images/home/background-home-tablet.jpg");
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1023px) {
   body {
     background-image: url("../images/home/background-home-desktop.jpg");
   }
@@ -606,37 +597,57 @@ body {
 
 main {
   text-align: center;
-  padding: 20px;
 }
 
 main h1 {
+  display: block;
   font-weight: normal;
-  font-family: "Barlow Condensed", "Lato", "Arial";
-  font-size: 28px;
-  letter-spacing: 4.75px;
-  text-transform: uppercase;
+  margin-top: 30px;
 }
 
-main h1 span {
-  font-family: "Bellfair", "Times New Roman";
-  font-size: 100px;
+main h1 div:nth-child(1) {
+  font-family: "Barlow Condensed";
+  font-size: 16px;
+  letter-spacing: 2.35px;
   text-transform: uppercase;
+  margin-top: 20px;
+}
+
+main h1 div:nth-child(2) {
+  /*
+  $heading-fs: (
+    1: 150px,
+    2: 100px,
+    3: 56px,
+    4: 32px
+  );
+  */
+  color: white;
+  font-family: "Bellefair", "Times New Roman";
+  font-size: 80px;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+main p {
+  max-width: 400px;
+  padding: 0 20px;
+  margin: auto;
 }
 
 .circular-btn-1 {
-  color: #0b0d17;
-  background-color: white;
-  font-family: "Bellfair", "Times New Roman";
+  /*
+  $heading-fs: (
+    1: 150px,
+    2: 100px,
+    3: 56px,
+    4: 32px
+  );
+  */
+  color: white;
+  font-family: "Bellefair", "Times New Roman";
   font-size: 32px;
   text-transform: uppercase;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  padding: 100px;
-  margin: auto;
-  margin-top: 80px;
-  -webkit-transition: 1s;
-  transition: 1s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -646,5 +657,14 @@ main h1 span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #0b0d17;
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  padding: 100px;
+  margin: auto;
+  margin-top: 40px;
+  scale: .7;
 }
 /*# sourceMappingURL=main.css.map */

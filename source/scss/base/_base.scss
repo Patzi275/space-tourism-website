@@ -25,61 +25,11 @@ html {
  * Basic styles for links
  */
 a {
-  color: white;
+  color: $light-sky-blue;
   text-decoration: none;
 
   @include on-event {
     color: $text-color;
     text-decoration: underline;
   }
-}
-
-/**
- * Heading 
- */
-
-.heading {
-  font-family: $heading-font-stack;
-
-  &1 {
-    font-size: 150px;
-  }  
-
-  &2 {
-    font-size: 100px;
-  }
-
-  &3 {
-    font-size: 56px;
-  }
-
-  &4 {
-    font-size: 32px;
-  }
-
-  &5 {
-    font-family: $text-font-stack;
-    font-size: 28px;
-    letter-spacing: 4.75;
-  }
-}
-
-.sub-heading {
-  font-family: $text-font-stack;
-
-  &1 {
-    font-family: $heading-font-stack;
-    font-size: 28px;
-  }
-
-  &2 {
-    font-size: 14px;
-    letter-spacing: 2.35;
-  }
-}
-
-.nav-text {
-  font-family: $text-font-stack;
-  font-size: 16px;
-  letter-spacing: 2.7;
 }

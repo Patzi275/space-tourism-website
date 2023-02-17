@@ -3,11 +3,6 @@
 // -----------------------------------------------------------------------------
 
 body {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-
     @include respond-to('small') {
         background-image: image('home/background-home-mobile.jpg');
     }
@@ -19,33 +14,50 @@ body {
     @include respond-to('large') {
         background-image: image('home/background-home-desktop.jpg');
     }
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
 main {
     text-align: center;
-    padding: 20px;
 
     h1 {
+        display: block;
         font-weight: normal;
-        @include heading(5);
+        margin-top: 30px;
         
-        span {
-            @include heading(2);
+        div:nth-child(1) {
+            @include sub-heading(2);
+            margin-top: 20px;
         }
+
+        div:nth-child(2) {
+            @include heading(2);
+            margin: 20px 0;
+        }
+    }
+
+    p {
+        max-width: 400px;
+        padding: 0 20px;
+        margin: auto;
     }
 
 }
 
 .circular-btn-1 {
+    @include heading(4);
+    @include flex-center;
     color: $brand-color;
     background-color: white;
-    @include heading(4);
     height: 50px;
     width: 50px;    
     border-radius: 50%;
     padding: 100px;
     margin: auto;
-    margin-top: 80px;
-    transition: 1s;
-    @include flex-center;
+    margin-top: 40px;
+    scale: .7;
 }
