@@ -2,12 +2,7 @@
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
 
-body {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-
+body#index-body {
     @include respond-to('small') {
         background-image: image('home/background-home-mobile.jpg');
     }
@@ -19,72 +14,71 @@ body {
     @include respond-to('large') {
         background-image: image('home/background-home-desktop.jpg');
     }
-}
 
-main.index-main {
-
-    h1 {
-        display: block;
-        font-weight: normal;
-        margin-top: 30px;
-        
-        div:nth-child(1) {
-            @include sub-heading(2);
-            margin-top: 20px;
-        }
-
-        div:nth-child(2) {
-            @include heading(2);
-            margin: 20px 0;
-        }
-
-        @include respond-to('medium') {
-            margin-top: 100px;
+    main {  
+        h1 {
+            display: block;
+            font-weight: normal;
+            margin-top: 30px;
             
             div:nth-child(1) {
-                @include sub-heading(4);
-                font-size: 20px;
+                @include sub-heading(2);
                 margin-top: 20px;
             }
+    
             div:nth-child(2) {
-                @include heading(1);
+                @include heading(2);
                 margin: 20px 0;
             }
-        }
-
-        @include respond-to('large') {
-            div:nth-child(1) {
-                @include sub-heading(3);
-                font-size: 25px;
-                margin-top: 20px;
+    
+            @include respond-to('medium') {
+                margin-top: 100px;
+                
+                div:nth-child(1) {
+                    @include sub-heading(4);
+                    font-size: 20px;
+                    margin-top: 20px;
+                }
+                div:nth-child(2) {
+                    @include heading(1);
+                    margin: 20px 0;
+                }
             }
-            div:nth-child(2) {
-                @include heading(1);
-                font-size: 125px;
-                margin: 20px 0;
+    
+            @include respond-to('large') {
+                div:nth-child(1) {
+                    @include sub-heading(3);
+                    font-size: 25px;
+                    margin-top: 20px;
+                }
+                div:nth-child(2) {
+                    @include heading(1);
+                    font-size: 125px;
+                    margin: 20px 0;
+                }
             }
         }
-    }
-
-    p {
-        max-width: 390px;
-        padding: 0 20px;
-        line-height: 1.6;
-        margin: auto;
-
-        @include respond-to('small') {
-            line-height: 1;
+    
+        p {
+            max-width: 390px;
+            padding: 0 20px;
+            line-height: 1.6;
+            margin: auto;
+    
+            /*@include respond-to('small') {
+                line-height: 1;
+            }*/
+    
+            @include respond-to('large') {
+                margin: unset;
+                padding: unset;
+                max-width: 360px;
+            }
         }
-
+    
         @include respond-to('large') {
-            margin: unset;
-            padding: unset;
-            max-width: 360px;
+            margin-top: 120px;
         }
-    }
-
-    @include respond-to('large') {
-        margin-top: 120px;
     }
 }
 

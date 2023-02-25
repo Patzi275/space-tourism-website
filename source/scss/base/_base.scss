@@ -39,11 +39,19 @@ ul {
   padding: unset;
 }
 
+body {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
 main {
-  text-align: center;
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  text-align: center;
 
   @include respond-to('large') {
     text-align: left;

@@ -1,0 +1,109 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+body#destination-body {
+    @include respond-to('small') {
+        background-image: image('destination/background-destination-mobile.jpg');
+    }
+
+    @include respond-to('medium') {
+        background-image: image('destination/background-destination-tablet.jpg');
+    }
+
+    @include respond-to('large') {
+        background-image: image('destination/background-destination-desktop.jpg');
+    }
+
+    main {
+
+        h3 {
+            @include nav-text();
+            margin-bottom: unset;
+
+            .number {
+                font-weight: bold;
+                font-size: 1.2em;
+                color: $dark-grey;
+                margin-right: 10px;
+            }
+        }
+
+        h2 {
+            @include heading(3);
+            margin: unset;
+        }
+
+        .destination-planet {
+            @include respond-to('small') {
+                width: 50vw;
+                margin: 20px;
+            }
+        }
+    }
+    /*main {  
+        h1 {
+            display: block;
+            font-weight: normal;
+            margin-top: 30px;
+            
+            div:nth-child(1) {
+                @include sub-heading(2);
+                margin-top: 20px;
+            }
+    
+            div:nth-child(2) {
+                @include heading(2);
+                margin: 20px 0;
+            }
+    
+            @include respond-to('medium') {
+                margin-top: 100px;
+                
+                div:nth-child(1) {
+                    @include sub-heading(4);
+                    font-size: 20px;
+                    margin-top: 20px;
+                }
+                div:nth-child(2) {
+                    @include heading(1);
+                    margin: 20px 0;
+                }
+            }
+    
+            @include respond-to('large') {
+                div:nth-child(1) {
+                    @include sub-heading(3);
+                    font-size: 25px;
+                    margin-top: 20px;
+                }
+                div:nth-child(2) {
+                    @include heading(1);
+                    font-size: 125px;
+                    margin: 20px 0;
+                }
+            }
+        }
+    
+        p {
+            max-width: 390px;
+            padding: 0 20px;
+            line-height: 1.6;
+            margin: auto;
+    
+            @include respond-to('small') {
+                line-height: 1;
+            }
+    
+            @include respond-to('large') {
+                margin: unset;
+                padding: unset;
+                max-width: 360px;
+            }
+        }
+    
+        @include respond-to('large') {
+            margin-top: 120px;
+        }
+    }*/
+}

@@ -380,8 +380,14 @@ ul {
   padding: unset;
 }
 
+body {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
 main {
-  text-align: center;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -390,6 +396,10 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
 }
 
 @media (min-width: 1023px) {
@@ -555,6 +565,7 @@ header nav {
   font-family: "Barlow Condensed";
   font-size: 16px;
   letter-spacing: 2.7px;
+  font-weight: lighter;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -693,46 +704,40 @@ header nav a .number {
   }
 }
 
-body {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-}
-
 @media (max-width: 768px) {
-  body {
+  body#index-body {
     background-image: url("../images/home/background-home-mobile.jpg");
   }
 }
 
 @media (min-width: 769px) and (max-width: 1023px) {
-  body {
+  body#index-body {
     background-image: url("../images/home/background-home-tablet.jpg");
   }
 }
 
 @media (min-width: 1023px) {
-  body {
+  body#index-body {
     background-image: url("../images/home/background-home-desktop.jpg");
   }
 }
 
-main.index-main h1 {
+body#index-body main h1 {
   display: block;
   font-weight: normal;
   margin-top: 30px;
 }
 
-main.index-main h1 div:nth-child(1) {
+body#index-body main h1 div:nth-child(1) {
   font-family: "Barlow Condensed";
   font-size: 16px;
   letter-spacing: 2.35px;
   text-transform: uppercase;
+  font-weight: normal;
   margin-top: 20px;
 }
 
-main.index-main h1 div:nth-child(2) {
+body#index-body main h1 div:nth-child(2) {
   /*
   $heading-fs: (
     1: 150px,
@@ -745,19 +750,21 @@ main.index-main h1 div:nth-child(2) {
   font-family: "Bellefair", "Times New Roman";
   font-size: 80px;
   text-transform: uppercase;
+  font-weight: normal;
   margin: 20px 0;
 }
 
 @media (min-width: 769px) and (max-width: 1023px) {
-  main.index-main h1 {
+  body#index-body main h1 {
     margin-top: 100px;
   }
-  main.index-main h1 div:nth-child(1) {
+  body#index-body main h1 div:nth-child(1) {
     text-transform: uppercase;
+    font-weight: normal;
     font-size: 20px;
     margin-top: 20px;
   }
-  main.index-main h1 div:nth-child(2) {
+  body#index-body main h1 div:nth-child(2) {
     /*
   $heading-fs: (
     1: 150px,
@@ -770,17 +777,19 @@ main.index-main h1 div:nth-child(2) {
     font-family: "Bellefair", "Times New Roman";
     font-size: 150px;
     text-transform: uppercase;
+    font-weight: normal;
     margin: 20px 0;
   }
 }
 
 @media (min-width: 1023px) {
-  main.index-main h1 div:nth-child(1) {
+  body#index-body main h1 div:nth-child(1) {
     text-transform: uppercase;
+    font-weight: normal;
     font-size: 25px;
     margin-top: 20px;
   }
-  main.index-main h1 div:nth-child(2) {
+  body#index-body main h1 div:nth-child(2) {
     /*
   $heading-fs: (
     1: 150px,
@@ -793,26 +802,24 @@ main.index-main h1 div:nth-child(2) {
     font-family: "Bellefair", "Times New Roman";
     font-size: 150px;
     text-transform: uppercase;
+    font-weight: normal;
     font-size: 125px;
     margin: 20px 0;
   }
 }
 
-main.index-main p {
+body#index-body main p {
   max-width: 390px;
   padding: 0 20px;
   line-height: 1.6;
   margin: auto;
-}
-
-@media (max-width: 768px) {
-  main.index-main p {
-    line-height: 1;
-  }
+  /*@include respond-to('small') {
+                line-height: 1;
+            }*/
 }
 
 @media (min-width: 1023px) {
-  main.index-main p {
+  body#index-body main p {
     margin: unset;
     padding: unset;
     max-width: 360px;
@@ -820,7 +827,7 @@ main.index-main p {
 }
 
 @media (min-width: 1023px) {
-  main.index-main {
+  body#index-body main {
     margin-top: 120px;
   }
 }
@@ -838,6 +845,7 @@ main.index-main p {
   font-family: "Bellefair", "Times New Roman";
   font-size: 32px;
   text-transform: uppercase;
+  font-weight: normal;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -879,6 +887,132 @@ main.index-main p {
   .circular-btn-1 {
     scale: 1;
     margin-top: 120px;
+  }
+}
+
+body#destination-body {
+  /*main {  
+        h1 {
+            display: block;
+            font-weight: normal;
+            margin-top: 30px;
+            
+            div:nth-child(1) {
+                @include sub-heading(2);
+                margin-top: 20px;
+            }
+    
+            div:nth-child(2) {
+                @include heading(2);
+                margin: 20px 0;
+            }
+    
+            @include respond-to('medium') {
+                margin-top: 100px;
+                
+                div:nth-child(1) {
+                    @include sub-heading(4);
+                    font-size: 20px;
+                    margin-top: 20px;
+                }
+                div:nth-child(2) {
+                    @include heading(1);
+                    margin: 20px 0;
+                }
+            }
+    
+            @include respond-to('large') {
+                div:nth-child(1) {
+                    @include sub-heading(3);
+                    font-size: 25px;
+                    margin-top: 20px;
+                }
+                div:nth-child(2) {
+                    @include heading(1);
+                    font-size: 125px;
+                    margin: 20px 0;
+                }
+            }
+        }
+    
+        p {
+            max-width: 390px;
+            padding: 0 20px;
+            line-height: 1.6;
+            margin: auto;
+    
+            @include respond-to('small') {
+                line-height: 1;
+            }
+    
+            @include respond-to('large') {
+                margin: unset;
+                padding: unset;
+                max-width: 360px;
+            }
+        }
+    
+        @include respond-to('large') {
+            margin-top: 120px;
+        }
+    }*/
+}
+
+@media (max-width: 768px) {
+  body#destination-body {
+    background-image: url("../images/destination/background-destination-mobile.jpg");
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  body#destination-body {
+    background-image: url("../images/destination/background-destination-tablet.jpg");
+  }
+}
+
+@media (min-width: 1023px) {
+  body#destination-body {
+    background-image: url("../images/destination/background-destination-desktop.jpg");
+  }
+}
+
+body#destination-body main h3 {
+  text-transform: uppercase;
+  font-family: "Barlow Condensed";
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  font-weight: lighter;
+  margin-bottom: unset;
+}
+
+body#destination-body main h3 .number {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #444444;
+  margin-right: 10px;
+}
+
+body#destination-body main h2 {
+  /*
+  $heading-fs: (
+    1: 150px,
+    2: 100px,
+    3: 56px,
+    4: 32px
+  );
+  */
+  color: white;
+  font-family: "Bellefair", "Times New Roman";
+  font-size: 56px;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: unset;
+}
+
+@media (max-width: 768px) {
+  body#destination-body main .destination-planet {
+    width: 50vw;
+    margin: 20px;
   }
 }
 /*# sourceMappingURL=main.css.map */
