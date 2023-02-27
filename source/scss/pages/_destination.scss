@@ -16,6 +16,7 @@ body#destination-body {
     }
 
     main {
+        padding: 0 25px;
 
         h3 {
             @include nav-text();
@@ -32,12 +33,54 @@ body#destination-body {
         h2 {
             @include heading(3);
             margin: unset;
+            margin-top: 20px;
         }
 
         .destination-planet {
             @include respond-to('small') {
                 width: 50vw;
-                margin: 20px;
+                margin: 30px;
+            }
+        }
+        
+        .destination-links {
+            @include sub-heading(2);
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            max-width: 60vw;
+
+            a {
+                padding-bottom: 10px;
+                transition: all .2s;
+
+                &:hover {
+                    border-bottom: 4px solid white;
+                }
+            }
+        }
+
+        .separator {
+            height: 1px;
+            width: auto;
+            background-color: gray;
+
+            @include respond-to('small') {
+                margin: 30px 0;
+            }
+        }
+
+        .stats {
+            &>div {
+                margin-bottom: 25px;
+
+                .label {
+                    @include sub-heading(2);
+                }
+
+                .value {
+                    @include sub-heading(1);
+                }
             }
         }
     }

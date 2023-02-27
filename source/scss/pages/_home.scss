@@ -62,8 +62,6 @@ body#index-body {
         p {
             max-width: 390px;
             padding: 0 20px;
-            line-height: 1.6;
-            margin: auto;
     
             /*@include respond-to('small') {
                 line-height: 1;
