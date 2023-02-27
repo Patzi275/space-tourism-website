@@ -893,74 +893,6 @@ body#index-body main p {
   }
 }
 
-body#destination-body {
-  /*main {  
-        h1 {
-            display: block;
-            font-weight: normal;
-            margin-top: 30px;
-            
-            div:nth-child(1) {
-                @include sub-heading(2);
-                margin-top: 20px;
-            }
-    
-            div:nth-child(2) {
-                @include heading(2);
-                margin: 20px 0;
-            }
-    
-            @include respond-to('medium') {
-                margin-top: 100px;
-                
-                div:nth-child(1) {
-                    @include sub-heading(4);
-                    font-size: 20px;
-                    margin-top: 20px;
-                }
-                div:nth-child(2) {
-                    @include heading(1);
-                    margin: 20px 0;
-                }
-            }
-    
-            @include respond-to('large') {
-                div:nth-child(1) {
-                    @include sub-heading(3);
-                    font-size: 25px;
-                    margin-top: 20px;
-                }
-                div:nth-child(2) {
-                    @include heading(1);
-                    font-size: 125px;
-                    margin: 20px 0;
-                }
-            }
-        }
-    
-        p {
-            max-width: 390px;
-            padding: 0 20px;
-            line-height: 1.6;
-            margin: auto;
-    
-            @include respond-to('small') {
-                line-height: 1;
-            }
-    
-            @include respond-to('large') {
-                margin: unset;
-                padding: unset;
-                max-width: 360px;
-            }
-        }
-    
-        @include respond-to('large') {
-            margin-top: 120px;
-        }
-    }*/
-}
-
 @media (max-width: 768px) {
   body#destination-body {
     background-image: url("../images/destination/background-destination-mobile.jpg");
@@ -980,7 +912,7 @@ body#destination-body {
 }
 
 body#destination-body main {
-  padding: 0 25px;
+  padding: 0 40px;
 }
 
 body#destination-body main h3 {
@@ -990,6 +922,8 @@ body#destination-body main h3 {
   letter-spacing: 2.7px;
   font-weight: lighter;
   margin-bottom: unset;
+  text-align: left;
+  font-size: 20px;
 }
 
 body#destination-body main h3 .number {
@@ -997,6 +931,19 @@ body#destination-body main h3 .number {
   font-size: 1.2em;
   color: #444444;
   margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  body#destination-body main h3 {
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  body#destination-body main h3 {
+    font-weight: normal;
+  }
 }
 
 body#destination-body main h2 {
@@ -1010,7 +957,7 @@ body#destination-body main h2 {
   */
   color: white;
   font-family: "Bellefair", "Times New Roman";
-  font-size: 56px;
+  font-size: 80px;
   text-transform: uppercase;
   font-weight: normal;
   margin: unset;
@@ -1018,9 +965,43 @@ body#destination-body main h2 {
 }
 
 @media (max-width: 768px) {
+  body#destination-body main h2 {
+    /*
+  $heading-fs: (
+    1: 150px,
+    2: 100px,
+    3: 56px,
+    4: 32px
+  );
+  */
+    color: white;
+    font-family: "Bellefair", "Times New Roman";
+    font-size: 56px;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+}
+
+body#destination-body main .destination-planet {
+  width: 50%;
+  margin: 60px;
+}
+
+@media (max-width: 768px) {
   body#destination-body main .destination-planet {
-    width: 50vw;
     margin: 30px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  body#destination-body main .destination-planet {
+    width: 40%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  body#destination-body main .col-6:nth-child(2) {
+    padding: 0 90px;
   }
 }
 
@@ -1050,16 +1031,38 @@ body#destination-body main .destination-links a:hover {
   border-bottom: 4px solid white;
 }
 
+@media (min-width: 769px) and (max-width: 1023px) {
+  body#destination-body main .destination-links {
+    max-width: 35vw;
+    font-weight: normal;
+  }
+}
+
 body#destination-body main .separator {
   height: 1px;
   width: auto;
-  background-color: gray;
+  background-color: #aaaaaa;
+  margin: 60px 0 30px;
 }
 
 @media (max-width: 768px) {
   body#destination-body main .separator {
     margin: 30px 0;
   }
+}
+
+body#destination-body main .stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 80%;
+  margin: auto;
 }
 
 body#destination-body main .stats > div {
@@ -1080,5 +1083,20 @@ body#destination-body main .stats > div .value {
   font-size: 28px;
   text-transform: uppercase;
   font-weight: normal;
+}
+
+@media (max-width: 768px) {
+  body#destination-body main .stats {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  body#destination-body main {
+    padding: 0 25px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -16,11 +16,13 @@ body#destination-body {
     }
 
     main {
-        padding: 0 25px;
+        padding: 0 40px;
 
         h3 {
             @include nav-text();
             margin-bottom: unset;
+            text-align: left;
+            font-size: 20px;
 
             .number {
                 font-weight: bold;
@@ -28,18 +30,42 @@ body#destination-body {
                 color: $dark-grey;
                 margin-right: 10px;
             }
+
+            @include respond-to('small') {
+                text-align: center;
+                font-size: 16px;
+            }
+
+            @include respond-to('medium') {
+                font-weight: normal;
+            }
         }
 
         h2 {
-            @include heading(3);
+            @include heading(2);
             margin: unset;
             margin-top: 20px;
+
+            @include respond-to('small') {
+                @include heading(3);
+            }
         }
 
         .destination-planet {
+            width: 50%;
+            margin: 60px;
             @include respond-to('small') {
-                width: 50vw;
                 margin: 30px;
+            }
+
+            @include respond-to('medium') {
+                width: 40%;
+            }
+        }
+
+        .col-6:nth-child(2) {
+            @include respond-to('medium') {
+                padding: 0 90px;
             }
         }
         
@@ -58,19 +84,31 @@ body#destination-body {
                     border-bottom: 4px solid white;
                 }
             }
+
+            @include respond-to('medium') {
+                max-width: 35vw;
+                font-weight: normal;
+            }
         }
 
         .separator {
             height: 1px;
             width: auto;
-            background-color: gray;
-
+            background-color: rgb(170, 170, 170);
+            margin: 60px 0 30px;
+            
             @include respond-to('small') {
                 margin: 30px 0;
             }
         }
 
         .stats {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 80%;
+            margin: auto;
+
             &>div {
                 margin-bottom: 25px;
 
@@ -82,71 +120,16 @@ body#destination-body {
                     @include sub-heading(1);
                 }
             }
-        }
-    }
-    /*main {  
-        h1 {
-            display: block;
-            font-weight: normal;
-            margin-top: 30px;
-            
-            div:nth-child(1) {
-                @include sub-heading(2);
-                margin-top: 20px;
-            }
-    
-            div:nth-child(2) {
-                @include heading(2);
-                margin: 20px 0;
-            }
-    
-            @include respond-to('medium') {
-                margin-top: 100px;
-                
-                div:nth-child(1) {
-                    @include sub-heading(4);
-                    font-size: 20px;
-                    margin-top: 20px;
-                }
-                div:nth-child(2) {
-                    @include heading(1);
-                    margin: 20px 0;
-                }
-            }
-    
-            @include respond-to('large') {
-                div:nth-child(1) {
-                    @include sub-heading(3);
-                    font-size: 25px;
-                    margin-top: 20px;
-                }
-                div:nth-child(2) {
-                    @include heading(1);
-                    font-size: 125px;
-                    margin: 20px 0;
-                }
-            }
-        }
-    
-        p {
-            max-width: 390px;
-            padding: 0 20px;
-            line-height: 1.6;
-            margin: auto;
-    
+
             @include respond-to('small') {
-                line-height: 1;
-            }
-    
-            @include respond-to('large') {
-                margin: unset;
-                padding: unset;
-                max-width: 360px;
+                flex-direction: column;
             }
         }
-    
-        @include respond-to('large') {
-            margin-top: 120px;
+
+        @include respond-to('small') {
+            padding: 0 25px;
         }
-    }*/
+
+    }
+
 }
