@@ -524,7 +524,7 @@ header .logo {
   margin-left: 40px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   header .logo {
     margin-left: 20px;
   }
@@ -559,7 +559,7 @@ header .hamburger_container .nav_close {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   header .hamburger_container {
     display: block;
   }
@@ -587,7 +587,7 @@ header nav a .number {
   margin-right: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   header nav {
     background: rgba(255, 255, 255, 0);
     backdrop-filter: blur(40.6px);
@@ -612,7 +612,7 @@ header nav a .number {
   }
 }
 
-@media (min-width: 769px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   header nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -709,13 +709,13 @@ header nav a .number {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   body#index-body {
     background-image: url("../images/home/background-home-mobile.jpg");
   }
 }
 
-@media (min-width: 769px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   body#index-body {
     background-image: url("../images/home/background-home-tablet.jpg");
   }
@@ -759,7 +759,7 @@ body#index-body main h1 div:nth-child(2) {
   margin: 20px 0;
 }
 
-@media (min-width: 769px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   body#index-body main h1 {
     margin-top: 100px;
   }
@@ -878,7 +878,7 @@ body#index-body main p {
           box-shadow: 0 0 0 60px rgba(255, 255, 255, 0.2);
 }
 
-@media (min-width: 769px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .circular-btn-1 {
     margin-top: 140px;
     margin-bottom: 120px;
@@ -893,13 +893,13 @@ body#index-body main p {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   body#destination-body {
     background-image: url("../images/destination/background-destination-mobile.jpg");
   }
 }
 
-@media (min-width: 769px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   body#destination-body {
     background-image: url("../images/destination/background-destination-tablet.jpg");
   }
@@ -933,14 +933,14 @@ body#destination-body main h3 .number {
   margin-right: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   body#destination-body main h3 {
     text-align: center;
     font-size: 16px;
   }
 }
 
-@media (min-width: 769px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   body#destination-body main h3 {
     font-weight: normal;
   }
@@ -964,7 +964,7 @@ body#destination-body main h2 {
   margin-top: 20px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   body#destination-body main h2 {
     /*
   $heading-fs: (
@@ -987,19 +987,19 @@ body#destination-body main .destination-planet {
   margin: 60px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   body#destination-body main .destination-planet {
     margin: 30px;
   }
 }
 
-@media (min-width: 769px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   body#destination-body main .destination-planet {
     width: 40%;
   }
 }
 
-@media (min-width: 769px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   body#destination-body main .col-6:nth-child(2) {
     padding: 0 90px;
   }
@@ -1031,7 +1031,7 @@ body#destination-body main .destination-links a:hover {
   border-bottom: 4px solid white;
 }
 
-@media (min-width: 769px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   body#destination-body main .destination-links {
     max-width: 35vw;
     font-weight: normal;
@@ -1045,7 +1045,7 @@ body#destination-body main .separator {
   margin: 60px 0 30px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   body#destination-body main .separator {
     margin: 30px 0;
   }
@@ -1085,7 +1085,7 @@ body#destination-body main .stats > div .value {
   font-weight: normal;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   body#destination-body main .stats {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1094,7 +1094,7 @@ body#destination-body main .stats > div .value {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   body#destination-body main {
     padding: 0 25px;
   }
