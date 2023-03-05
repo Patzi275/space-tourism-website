@@ -39,6 +39,10 @@ body#destination-body {
             @include respond-to('medium') {
                 font-weight: normal;
             }
+
+            @include respond-to('large') {
+                margin-top: unset;
+            }
         }
 
         h2 {
@@ -52,7 +56,7 @@ body#destination-body {
         }
 
         .destination-planet {
-            width: 50%;
+            width: 80%;
             margin: 60px;
             @include respond-to('small') {
                 margin: 30px;
@@ -74,6 +78,7 @@ body#destination-body {
             display: flex;
             justify-content: space-between;
             margin: 0 auto;
+            height: 30px;
             max-width: 60vw;
 
             a {
@@ -82,6 +87,8 @@ body#destination-body {
 
                 &:hover {
                     border-bottom: 4px solid white;
+                    font-weight: normal;
+                    transition: padding-bottom .2s;
                 }
             }
 
@@ -126,10 +133,20 @@ body#destination-body {
             }
         }
 
+        .col-6 {
+
+            @include responde-to('large') {
+                
+            }
+        }
+
         @include respond-to('small') {
             padding: 0 25px;
         }
 
+        @include responde-to('large') {
+            padding: 0;
+        }
     }
 
 }

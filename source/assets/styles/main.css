@@ -412,7 +412,7 @@ main {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 70px 10% 0 10%;
+    margin: 40px 10% 0 10%;
   }
   main .col-6 {
     width: 50%;
@@ -946,6 +946,12 @@ body#destination-body main h3 .number {
   }
 }
 
+@media (min-width: 1023px) {
+  body#destination-body main h3 {
+    margin-top: unset;
+  }
+}
+
 body#destination-body main h2 {
   /*
   $heading-fs: (
@@ -983,7 +989,7 @@ body#destination-body main h2 {
 }
 
 body#destination-body main .destination-planet {
-  width: 50%;
+  width: 80%;
   margin: 60px;
 }
 
@@ -1018,6 +1024,7 @@ body#destination-body main .destination-links {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 auto;
+  height: 30px;
   max-width: 60vw;
 }
 
@@ -1029,6 +1036,9 @@ body#destination-body main .destination-links a {
 
 body#destination-body main .destination-links a:hover {
   border-bottom: 4px solid white;
+  font-weight: normal;
+  -webkit-transition: padding-bottom .2s;
+  transition: padding-bottom .2s;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
