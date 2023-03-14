@@ -912,7 +912,7 @@ body#index-body main p {
 }
 
 body#destination-body main {
-  padding: 0 40px;
+  padding: 0 40px 40px;
 }
 
 body#destination-body main h3 {
@@ -1014,6 +1014,8 @@ body#destination-body main .destination-planet {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    padding: 20px;
+    padding-bottom: 30px;
   }
 }
 

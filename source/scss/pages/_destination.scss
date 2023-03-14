@@ -16,7 +16,7 @@ body#destination-body {
     }
 
     main {
-        padding: 0 40px;
+        padding: 0 40px 40px;
 
         h3 {
             @include nav-text();
@@ -73,6 +73,8 @@ body#destination-body {
                 margin-right: 0;
                 margin-bottom: 0;
                 align-self: center;
+                padding: 20px;
+                padding-bottom: 30px;
             }
         }
 
