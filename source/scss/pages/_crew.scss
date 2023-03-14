@@ -1,0 +1,20 @@
+body#crew-body {
+    @include respond-to('small') {
+        background-image: image('crew/background-crew-mobile.jpg');
+    }
+
+    @include respond-to('medium') {
+        background-image: image('crew/background-crew-tablet.jpg');
+    }
+
+    @include respond-to('large') {
+        background-image: image('crew/background-crew-desktop.jpg');
+    }
+
+    main {
+        .member-image {
+            max-height: 79vh;
+            margin: 0 auto;
+        }
+    }
+}

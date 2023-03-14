@@ -1188,4 +1188,27 @@ body#destination-body main .stats > div .value {
     padding: 0;
   }
 }
+
+@media (max-width: 767px) {
+  body#crew-body {
+    background-image: url("../images/crew/background-crew-mobile.jpg");
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  body#crew-body {
+    background-image: url("../images/crew/background-crew-tablet.jpg");
+  }
+}
+
+@media (min-width: 1023px) {
+  body#crew-body {
+    background-image: url("../images/crew/background-crew-desktop.jpg");
+  }
+}
+
+body#crew-body main .member-image {
+  max-height: 79vh;
+  margin: 0 auto;
+}
 /*# sourceMappingURL=main.css.map */
